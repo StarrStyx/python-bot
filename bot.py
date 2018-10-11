@@ -6,18 +6,23 @@ TOKEN = 'NDk5NjAyOTU1MjgwOTczODI1.DqA5Fg.-WBTGxdUhoM-nLJ-Xu8N_nbWbKE'
 
 client = commands.Bot(command_prefix = '!!')
 
+#Called when bot is initially started.
 @client.event
 async def on_ready():
     print('Hello Bot.')
 
+#Help command
 @client.command()
 async def cmdlist():
-    await client.say('```This is a help message, please leave after a beep```')
+    await client.say('```List of commands: (Prefix for commands is !!)\n\n- roll: Rolls random number between 1 and 100```')
 
+#Roll command
 @client.command()
 async def roll():
     roll_no = randint(1,100)
-    await client.say(roll_no)
+    await client.say(':game_die: {}'.format(roll_no))
+
+
 
 #@client.event
 #async def on_message(message):
