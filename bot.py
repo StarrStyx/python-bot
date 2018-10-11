@@ -19,10 +19,6 @@ async def roll():
     roll_no = randint(1,100)
     await client.say(roll_no)
 
-@client.command()
-async def rename(ctx, name):
-    await client.edit_profile
-
 #@client.event
 #async def on_message(message):
     #author = message.author
