@@ -1,11 +1,11 @@
 import discord
 import json
-import os
+from os import environ
 from discord.ext import commands
 from random import randint
 from random import choice
 
-TOKEN = os.environ.get('BOT_TOKEN')
+TOKEN = environ.get('BOT_TOKEN')
 
 client = commands.Bot(command_prefix = '-')
 
