@@ -24,7 +24,7 @@ async def on_ready():
 async def cmdlist():
     embedCMD = discord.Embed(
        #title = 'StarrBot Command List',
-       description = '''Utilities: `roll` \nMisc.: `simon` `when` `finger` `fbi` `911`''',
+       description = '''Utilities: `roll` \nMisc.: `when` `finger` `fbi` `911`''',
        colour = discord.Colour.gold()
     )
 
@@ -67,6 +67,8 @@ async def roll():
         await client.say(':game_die: Are you Toy? You got {} lol.'.format(roll_no))
     #await client.say(':game_die: {}'.format(roll_no))
 
+#########################################################################################################
+                ### Misc. ###
 #########################################################################################################
 
 #Simon
