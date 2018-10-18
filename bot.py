@@ -40,10 +40,10 @@ async def cmdlist():
 #async def on_member_join(member):
     #await client.say("asdf")
 
-@client.event
-async def on_message(message):
-    channel = message.channel
-    await client.say(channel)
+#@client.event
+#async def on_message(message):
+    #channel = message.channel
+    #await client.say(channel)
 
 #########################################################################################################
                 ### Utilities ###
