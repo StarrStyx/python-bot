@@ -1,9 +1,11 @@
 import discord
+import json
+from os import environ
 from discord.ext import commands
 from random import randint
 from random import choice
 
-TOKEN = 'NDk5NjAyOTU1MjgwOTczODI1.DqA5Fg.-WBTGxdUhoM-nLJ-Xu8N_nbWbKE'
+TOKEN = environ.get['BOT_TOKEN', default=None]
 
 client = commands.Bot(command_prefix = '-')
 
@@ -12,6 +14,10 @@ client = commands.Bot(command_prefix = '-')
 async def on_ready():
     await client.change_presence(game=discord.Game(name='with -cmdlist'))
     print('Hello Bot.')
+
+#########################################################################################################
+                ### BASIC STUFF ###
+#########################################################################################################
 
 #Help command
 @client.command()
@@ -25,6 +31,23 @@ async def cmdlist():
     embedCMD.set_footer(text='For more enquires please contact StarrStyx#0526')
     embedCMD.set_author(name='List of commands:', icon_url='https://starrstyx.s-ul.eu/JxZ9upVu')
     await client.say(embed=embedCMD)
+
+#########################################################################################################
+                ### MANAGEMENT ###
+#########################################################################################################
+
+#@client.event
+#async def on_member_join(member):
+    #await client.say("asdf")
+
+@client.event
+async def on_message(message):
+    channel = message.channel
+    await client.say(channel)
+
+#########################################################################################################
+                ### Utilities ###
+#########################################################################################################
 
 #Roll command
 @client.command()
@@ -44,6 +67,8 @@ async def roll():
         await client.say(':game_die: Are you Toy? You got {} lol.'.format(roll_no))
     #await client.say(':game_die: {}'.format(roll_no))
 
+#########################################################################################################
+
 #Simon
 #@client.command()
 #async def simon():
@@ -58,6 +83,22 @@ async def roll():
     #embedSimon.set_image(url=simonchoice)
 
     #await client.say(embed=embedSimon)
+
+#Simon test
+#@client.command(pass_context = True)
+#async def simontest(ctx):
+
+    #select_channel = ctx.message.channel
+    #simonlist = [r'assets\simon_1.png', r'assets\simon_2.png', r'assets\simon_3.png.jpg']
+    #simonchoice = choice(simonlist)
+
+    #embedSimon = discord.Embed(
+       #title = ''
+    #)
+    
+    #embedSimon.set_image(url=simonchoice)
+
+    #await client.send_file(select_channel, simonchoice)
 
 #FBI command
 @client.command()
@@ -168,5 +209,7 @@ async def _911():
     #content = message.content
     #channel = message.channel
     #await client.send_message(channel, '{}: {}'.format(author, content))
+
+#########################################################################################################
 
 client.run(TOKEN)
