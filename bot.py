@@ -64,7 +64,7 @@ async def roll():
         await client.say(':game_die: Rip, you only got {}.'.format(roll_no))
     if roll_no == 1:
         await client.say(':game_die: Are you Toy? You got {} lol.'.format(roll_no))
-    await client.say(':game_die: {}'.format(roll_no))
+    #await client.say(':game_die: {}'.format(roll_no))
 
 #########################################################################################################
                 ### Misc. ###
