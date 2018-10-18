@@ -5,7 +5,7 @@ from discord.ext import commands
 from random import randint
 from random import choice
 
-TOKEN = environ.get['BOT_TOKEN', default=None]
+TOKEN = 'NDk5NjAyOTU1MjgwOTczODI1.Dqqh4Q.kwnFSvFUIsMP73wtPKXkyLHkz74'
 
 client = commands.Bot(command_prefix = '-')
 
