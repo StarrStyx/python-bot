@@ -9,6 +9,9 @@ TOKEN = 'NDk5NjAyOTU1MjgwOTczODI1.Dqqh4Q.kwnFSvFUIsMP73wtPKXkyLHkz74'
 
 client = commands.Bot(command_prefix = '-')
 
+cmd_list = """Utilities: `roll` 
+Misc.: `when` `finger` `fbi` `911` `!^`"""
+
 #Called when bot is initially started.
 @client.event
 async def on_ready():
@@ -24,7 +27,7 @@ async def on_ready():
 async def cmdlist():
     embedCMD = discord.Embed(
        #title = 'StarrBot Command List',
-       description = '''Utilities: `roll` \nMisc.: `when` `finger` `fbi` `911`''',
+       description = cmd_list,
        colour = discord.Colour.gold()
     )
 
