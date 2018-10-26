@@ -76,7 +76,7 @@ async def roll():
 #Simon
 @client.command()
 async def simon():
-    if client.get_server == 150208319871516673 :
+    if client.get_server == "150208319871516673" :
         simonlist = ['https://media.discordapp.net/attachments/150208319871516673/377732157977919488/3.png', 'https://cdn.discordapp.com/attachments/150208512914489345/371419413821390868/2.png', 'https://cdn.discordapp.com/attachments/150208512914489345/371419288789188608/1.jpg']
         simonchoice = choice(simonlist)
 
@@ -87,7 +87,6 @@ async def simon():
         embedSimon.set_image(url=simonchoice)
 
         await client.say(embed=embedSimon)
-    
 
 #Simon test
 #@client.command(pass_context = True)
