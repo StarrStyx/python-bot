@@ -189,6 +189,10 @@ async def _911():
 ┃┃┃┃┃┃┃┃     ┃┃┃┃┃┃┃┃
 ┻┻┻┻┻┻┻┻     ┻┻┻┻┻┻┻┻ :police_car: :police_car: :police_car: :police_car: :police_car:""")
 
+@client.command(name="!^")
+async def agree():
+    await client.say("I agree!")
+
 #@client.event
 #async def on_message(message):
     #author = message.author
