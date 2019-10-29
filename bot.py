@@ -11,6 +11,7 @@ bot = commands.Bot(command_prefix='*')
 async def on_ready():
    print('logged on')
 
+@client.event
 async def on_message(message):
     if 0 == 1:
         osu.get_user()
