@@ -1,7 +1,6 @@
 import discord
 import json
 from os import environ
-from discord.ext import commands
 from random import randint
 from random import choice
 from boto.s3.connection import S3Connection
