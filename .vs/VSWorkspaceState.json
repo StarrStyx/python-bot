@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\__pycache__"
   ],
   "SelectedNode": "\\bot.py",
   "PreviewInSolutionExplorer": false

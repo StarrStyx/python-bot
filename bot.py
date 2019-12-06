@@ -1,4 +1,5 @@
 import discord
+from discord.ext import commands
 import json
 import osu
 
@@ -7,13 +8,26 @@ token = "var1"
 client = discord.Client()
 bot = commands.Bot(command_prefix='*')
 
-@client.event
+@bot.event
 async def on_ready():
-   print('logged on')
+    await client.change_presence(game=discord.Game(name='with -cmdlist'))
+    print('logged on')
 
-@client.event
+# fetch userdata
+@bot.command
+async def user(ctx,arg):
+    userdata = await osu.get_user(arg)
+    prinit(userdata.text)
+
+@bot.event
+async def getuserdata():
+    osu.get_user()
+
+@bot.event
 async def on_message(message):
-    if 0 == 1:
-        osu.get_user()
+    if message.content.startswith('-hello'):
+        await message.channel.send('hello!')
 
-client.run(token)
+bot.run(token)
+
+#osu.get_user("StarrStyx")
